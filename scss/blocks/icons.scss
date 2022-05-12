@@ -1,0 +1,70 @@
+.icons {
+  display: flex;
+  align-items: center;
+
+  .icons_cart {
+    margin: 0 12px;
+  }
+
+  .icons_search {
+    position: relative;
+    margin-left: 12px;
+
+    button {
+      appearance: none;
+      background: none;
+      box-shadow: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      width: 16px;
+      height: 15px;
+      display: none;
+      position: relative;
+      z-index: 2;
+    }
+
+    input {
+      width: 170px;
+      padding: 5px 45px 5px 10px;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      box-shadow: 0 0 10px 0 $black;
+      border: none;
+      font-size: 12px;
+      line-height: 16px;
+      color: $black;
+      border-radius: 22px;
+      position: absolute;
+      left: -145px;
+      top: -5px;
+      z-index: -1;
+      opacity: 0;
+      appearance: none;
+      transition-duration: 0.5s;
+      transition-property: opacity;
+    }
+  }
+
+  .icons_search--active {
+
+    input {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    button {
+      display: block;
+    }
+
+    .icons_img {
+      display: none;
+    }
+  }
+
+  .icons_img {
+    display: block;
+    cursor: pointer;
+  }
+}
